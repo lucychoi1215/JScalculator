@@ -1,6 +1,6 @@
 var halfInput = document.getElementById("half-input");
 var halfButton = document.getElementById("half-button");
-
+var fortuneOutput = document.getElementById("fortune-output");
 
 halfButton.addEventListener("click", halfNumber);
 
@@ -69,7 +69,8 @@ function fortune () {
   if (fortuneInput == "") {
     alert("Please enter you name.")
   } else {
-    alert("Dear "+ fortuneInput +", "+ fortuneText[randomFortuneText]);
+    // alert("Dear "+ fortuneInput +", "+ fortuneText[randomFortuneText]);
+    fortuneOutput.innerText = ("Dear "+ fortuneInput +", "+ fortuneText[randomFortuneText]);
     restyle();
     // document.getElementById("title2").style.fontSize = "1em";
     // document.getElementById("title2").style.color = "#bbb1e3";
