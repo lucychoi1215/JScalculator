@@ -47,4 +47,6 @@ body, html {
 
 #fortune-output {
   color: white;
+  text-shadow: 0 0 1vmin white;
+
 }
