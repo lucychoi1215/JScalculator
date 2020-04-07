@@ -9,21 +9,31 @@ function halfNumber() {
   var inputNum = halfInput.value;
   var outputNum = inputNum/2;
 
+    function restyle2 () {
+      document.getElementById("title2").style.fontSize = "3vmin";
+      document.getElementById("title2").style.color = "white";
+      document.getElementById("title2").style.textShadow = "0 0 2vmin white";
+
+      // fortuneButton.style.width = "20vmin";
+      fortuneButton.style.fontSize= "2.5vmin";
+      fortuneButton.style.color= "white";
+      fortuneButton.style.boxShadow= " 0 0 2vmin white";
+    }
   if (inputNum == "") {
     alert("Please enter the number.")
   } else {
 
     alert("Half of "+ inputNum + " "+ "is "+ outputNum);
     console.log("Half of "+ inputNum + " "+ "is "+ outputNum);
-
-    document.getElementById("title2").style.fontSize = "3vmin";
-    document.getElementById("title2").style.color = "white";
-    document.getElementById("title2").style.textShadow = "0 0 2vmin white";
-
-    // fortuneButton.style.width = "20vmin";
-    fortuneButton.style.fontSize= "2.5vmin";
-    fortuneButton.style.color= "white";
-    fortuneButton.style.boxShadow= " 0 0 2vmin white";
+    restyle2();
+    // document.getElementById("title2").style.fontSize = "3vmin";
+    // document.getElementById("title2").style.color = "white";
+    // document.getElementById("title2").style.textShadow = "0 0 2vmin white";
+    //
+    // // fortuneButton.style.width = "20vmin";
+    // fortuneButton.style.fontSize= "2.5vmin";
+    // fortuneButton.style.color= "white";
+    // fortuneButton.style.boxShadow= " 0 0 2vmin white";
   }
 }
 
@@ -45,10 +55,7 @@ function fortune () {
 
   var fortuneInput = document.getElementById("fortune-input").value;
 
-  if (fortuneInput == "") {
-    alert("Please enter you name.")
-  } else {
-    alert("Dear "+ fortuneInput +", "+ fortuneText[randomFortuneText]);
+  function restyle() {
     document.getElementById("title2").style.fontSize = "1em";
     document.getElementById("title2").style.color = "#bbb1e3";
     document.getElementById("title2").style.textShadow = "none";
@@ -57,6 +64,21 @@ function fortune () {
     fortuneButton.style.fontSize= "2vmin";
     fortuneButton.style.color= "#211940";
     fortuneButton.style.boxShadow= " none";
+  }
+
+  if (fortuneInput == "") {
+    alert("Please enter you name.")
+  } else {
+    alert("Dear "+ fortuneInput +", "+ fortuneText[randomFortuneText]);
+    restyle();
+    // document.getElementById("title2").style.fontSize = "1em";
+    // document.getElementById("title2").style.color = "#bbb1e3";
+    // document.getElementById("title2").style.textShadow = "none";
+    //
+    // // fortuneButton.style.width = "20vmin";
+    // fortuneButton.style.fontSize= "2vmin";
+    // fortuneButton.style.color= "#211940";
+    // fortuneButton.style.boxShadow= " none";
 
   }
 }
